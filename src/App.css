@@ -1,38 +1,283 @@
-.App {
+/* Define color palette variables */
+:root {
+  --primary-blue: #2980b9;
+  --accent-red: #e74c3c;
+  --light-blue: #ecf6fc;
+  --background: #ffffff;
+  --text-color: #333;
+}
+
+/* Reset defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--light-blue);
+  color: var(--text-color);
+}
+
+/* Login Styles */
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.login-container h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-blue);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-form {
   display: flex;
   flex-direction: column;
+}
+.login-input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+}
+.login-button {
+  padding: 10px;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 4px;
+  color: var(--background);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-button:hover {
+  background-color: var(--accent-red);
+}
+
+/* Container */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: var(--primary-blue);
+  padding: 20px;
+  border-radius: 8px;
+}
+.app-header h1 {
+  font-size: 2rem;
+  color: var(--background);
+}
+
+/* Main Content Styles */
+.main-content {
+  background: var(--background);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Box Styles (new designs for sections) */
+.section-box {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Different border styles for each section */
+.overall-schedule {
+  border: 2px solid var(--primary-blue);
+}
+.workshop-section {
+  border: 2px dashed var(--accent-red);
+}
+.chattanooga-section {
+  border: 2px dotted var(--primary-blue);
+}
+.suggestions-section {
+  border: 2px double var(--accent-red);
+}
+.techspo-section {
+  border: 2px groove var(--primary-blue);
+}
+
+/* Section Titles */
+.section-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-blue);
+}
+
+/* Schedule List */
+.schedule-list {
+  list-style-type: none;
+}
+
+/* Schedule Items for each section */
+.overall-schedule .schedule-item {
+  background: var(--background);
+  border: 2px solid var(--accent-red);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.workshop-section .schedule-item {
+  background: var(--background);
+  border: 2px dashed var(--accent-red);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.chattanooga-section .schedule-item {
+  background: var(--background);
+  border: 2px dotted var(--accent-red);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.suggestions-section .schedule-item {
+  background: var(--background);
+  border: 2px double var(--accent-red);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.techspo-section .schedule-item {
+  background: var(--background);
+  border: 2px groove var(--accent-red);
+  color: var(--text-color);
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.event-note {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Workshop Section */
+.workshop-list {
+  list-style-type: none;
+  padding: 0;
+}
+.workshop-item {
+  margin-bottom: 10px;
+}
+.workshop-item button {
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 4px;
+  color: var(--background);
+  font-size: 1rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.workshop-item button:hover {
+  background-color: var(--accent-red);
+}
+.workshop-item p {
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+/* Suggestions Form */
+.suggestion-form {
+  display: flex;
+  flex-direction: column;
+}
+.suggestion-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--primary-blue);
+  border-radius: 4px;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+.submit-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: var(--primary-blue);
+  border: none;
+  border-radius: 4px;
+  color: var(--background);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+  background-color: var(--accent-red);
+}
+
+/* Remove button for suggestions */
+.remove-button {
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: var(--accent-red);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Submitted Suggestions */
+.submitted-suggestions {
+  margin-top: 20px;
+}
+.submitted-suggestions h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-blue);
+}
+.suggestion-item {
+  background: var(--accent-red);
+  color: var(--background);
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+  .section-box {
+    padding: 15px;
+  }
+  .section-box h2 {
+    font-size: 1.3rem;
+  }
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }
